@@ -27,7 +27,50 @@ body {
 .g2 {
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: 50px 1fr 50px 1fr;
+    grid-template-rows: 50px minmax(75px, 1fr) 50px minmax(75px, 1fr);
     gap: 15px;
-    height: 500px;
+}
+
+.g3 {
+    display: grid;
+    height: 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20px 1fr 1fr 20px;
+    gap: 10px;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main main"
+    "sidebar main main main"
+    "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #c9fdfd;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: rgb(255, 196, 223);
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 10px;
+}
+
+.articles {
+    background-color: rgb(114, 195, 168);
+
+}
+
+.featured {
+    background-color: rgb(252, 252, 197);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(178, 176, 176);
 }
