@@ -2,3 +2,32 @@ body {
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.g1 .item {
+    align-content: center;
+    text-align: center;
+    background-color: rgb(230, 229, 229);
+}
+
+.g1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    height: 500px;
+}
+
+.g2 .item {
+    align-content: center;
+    text-align: center;
+    background-color: rgb(237, 105, 105);
+    color: white;
+}
+
+.g2 {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 50px 1fr 50px 1fr;
+    gap: 15px;
+    height: 500px;
+}
